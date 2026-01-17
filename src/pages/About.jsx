@@ -6,7 +6,7 @@ import {
   faJsSquare,
   faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
-
+import MyImage from '../assets/wizzy_image.jpg';
 const techStacks = [
   { name: "HTML5", icon: faHtml5, level: "Advanced" },
   { name: "CSS3 / Tailwind", icon: faCss3Alt, level: "Advanced" },
@@ -23,7 +23,7 @@ function About() {
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/3 flex justify-center">
             <img
-              src="/your-photo.jpg"
+              src={MyImage}
               alt="Wizzy"
               className="w-48 h-48 object-cover rounded-full border-4 border-blue-900"
             />

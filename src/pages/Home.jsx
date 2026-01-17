@@ -5,6 +5,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import SocialIcons from "../components/SocialIcons";
+import { Link } from "react-router-dom";
 
   function Home() {
   return (
@@ -25,8 +26,23 @@ import SocialIcons from "../components/SocialIcons";
           </p>
         </div>
 
-        <div className="w-max flex justify-center gap-6 text-gray-400 p-4 rounded-full">
-          <SocialIcons icons={[faGithub, faXTwitter, faEnvelope]} className="text-xl md:text-2xl" />
+      <div className="flex justify-center gap-4 mt-8 mb-6">
+         <Link
+            to="/contact"
+            className="px-6 py-3 border border-blue-900 text-blue-900 rounded hover:bg-blue-900 hover:text-white transition"
+             >
+           Hire Me
+        </Link>
+
+        < Link
+            to="/projects"
+          className="px-6 py-3 bg-blue-900 text-white rounded hover:bg-blue-800 transition"
+            >
+           View Projects
+           </Link>
+          </div>
+        <div className="w-max flex justify-center gap-6 text-gray-400 p-4 rounded-full mt-6">
+          <SocialIcons icons={[faGithub, faXTwitter, faEnvelope]} className="text-2xl md:text-2xl" />
         </div>
       </div>
     </section>
