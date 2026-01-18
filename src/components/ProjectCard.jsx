@@ -3,20 +3,18 @@ import { NavLink } from "react-router-dom";
 function ProjectCard({ project }) {
   return (
     <div className="flex flex-col md:flex-row bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-      {/* Left: Screenshot */}
       <div className="md:w-1/2">
         <img
-          src={project.image}
-          alt={project.name}
+          src={project.image_url_1}
+          alt={project.title}
           className="w-full h-64 md:h-full object-cover"
         />
       </div>
 
-      {/* Right: Description */}
       <div className="md:w-1/2 p-6 flex flex-col justify-between">
         <div>
-          <h3 className="text-2xl font-bold mb-4">{project.name}</h3>
-          <p className="text-gray-300 mb-6">{project.shortDescription}</p>
+          <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+          <p className="text-gray-300 mb-6">{project.short_description}</p>
         </div>
 
         <div>

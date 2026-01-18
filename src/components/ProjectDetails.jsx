@@ -19,9 +19,8 @@ function ProjectDetails({ project }) {
   return (
     <section className="min-h-screen px-6 py-12 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto flex flex-col gap-8">
-        {/* Gallery / Screenshots */}
         <div className="grid md:grid-cols-2 gap-4">
-          {project.images.map((img, idx) => (
+          {project.images?.map((img, idx) => (
             <img
               key={idx}
               src={img}
@@ -32,11 +31,11 @@ function ProjectDetails({ project }) {
         </div>
 
         <div>
-          <h2 className="text-4xl font-bold mb-4">{project.name}</h2>
-          <p className="text-gray-300 mb-4">{project.description}</p>
+          <h2 className="text-4xl font-bold mb-4">{project.title}</h2>
+          <p className="text-gray-300 mb-4">{project.full_description}</p>
 
           <div className="flex flex-wrap gap-2 mb-6">
-            {project.techStack.map((tech, idx) => (
+            {project.tech_stack?.map((tech, idx) => (
               <span
                 key={idx}
                 className="bg-blue-900 text-white px-3 py-1 rounded-full text-sm"
@@ -47,9 +46,9 @@ function ProjectDetails({ project }) {
           </div>
 
           <div className="flex gap-4 mb-12">
-            {project.liveDemo && (
+            {project.live_url && (
               <a
-                href={project.liveDemo}
+                href={project.live_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-900 px-4 py-2 rounded hover:bg-blue-800 transition"
@@ -57,9 +56,9 @@ function ProjectDetails({ project }) {
                 Live Demo
               </a>
             )}
-            {project.github && (
+            {project.github_url && (
               <a
-                href={project.github}
+                href={project.github_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-700 px-4 py-2 rounded hover:bg-gray-600 transition"
