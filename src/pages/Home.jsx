@@ -16,13 +16,13 @@ import { Link } from "react-router-dom";
         </div>
 
         <div className="mb-6">
-          <h2 className="text-3xl md:text-5xl font-bold text-white cursor-pointer">A Front-end Developer</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white cursor-pointer leading-tight">A Front-end Developer</h2>
         </div>
 
         <div className="mb-8">
           <p className="text-gray-400 text-lg cursor-pointer">
-            I build clean, responsive, and practical web applications focused on
-            real-world problems and solid user experience.
+            Building reliable digital products with focus, discipline, and real-world impact.
+          Web developer crafting clean interfaces, scalable logic, and practical solutions—one shipped project at a time.
           </p>
         </div>
 

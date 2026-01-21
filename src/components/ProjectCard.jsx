@@ -7,7 +7,7 @@ function ProjectCard({ project }) {
         <img
           src={project.image_url_1}
           alt={project.title}
-          className="w-full h-64 md:h-full object-cover"
+          className="w-full h-64 "
         />
       </div>
 
