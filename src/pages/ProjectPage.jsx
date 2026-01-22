@@ -28,7 +28,7 @@ function ProjectPage() {
       }, []);
 
   
-  if (!project) return <p className="min-h-100 text-center mt-20">Project not found</p>;
+  if (!project) return <p className="min-h-screen text-center mt-20">Project not found</p>;
 
   return <ProjectDetails project={project} />;
 }

@@ -24,12 +24,12 @@ const item = {
 
   function Home() {
   return (
-    <motion.section className="flex justify-center px-6 py-12"
+    <motion.section className="flex justify-center h-screen px-6 py-12"
     variants={container}
     initial="hidden"
     animate="show"
     >
-      <div className="max-w-3xl w-full flex flex-col items-center text-center">
+      <div className="max-w-3xl w-full flex flex-col items-center justify-center text-center">
         <div className="mb-4">
           <motion.h1 className="text-2xl font-bold text-white cursor-pointer"
           variants={item}

@@ -41,7 +41,7 @@ import Reveal from "../components/Reveal";
         <div className="grid md:grid-cols-3 gap-8 mb-10">
           {skillCategories.map((cat, idx) => (
             <Reveal key={idx}>
-              <div className="bg-gray-800 rounded-lg p-6 shadow-md">
+              <div className="bg-gray-800 rounded-lg p-6 shadow-md min-h-75">
                 <h3 className="text-xl font-semibold mb-4">{cat.category}</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
                   {cat.skills.map((skill, i) => (

@@ -5,12 +5,13 @@ import {
   faCss3Alt,
   faJsSquare,
   faGitAlt,
+  faCss3,
 } from "@fortawesome/free-brands-svg-icons";
 import MyImage from '../assets/wizzy_image.jpg';
 import Reveal from "../components/Reveal";
 const techStacks = [
   { name: "HTML5", icon: faHtml5, level: "Advanced" },
-  { name: "CSS3 / Tailwind", icon: faCss3Alt, level: "Advanced" },
+  { name: "CSS3 / Tailwind", icon: faCss3, level: "Advanced" },
   { name: "JavaScript", icon: faJsSquare, level: "Experienced" },
   { name: "Git / GitHub", icon: faGitAlt, level: "Experienced" },
   { name: "React", icon: faReact, level: "Experienced" },

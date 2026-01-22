@@ -92,17 +92,21 @@ function Contact() {
           <h3 className="text-3xl font-bold mb-6 text-center">Other Ways to Reach Me</h3>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <Reveal>
+              <a href="https://x.com/arodike_wizzy">
               <div className="flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
                 <FontAwesomeIcon icon={faXTwitter} size="2x" className="text-blue-500" />
-                <p className="text-lg"><a href="">@arodike_wizzy</a></p>
+                <p className="text-lg">@arodike_wizzy</p>
               </div>
+              </a>
             </Reveal>
 
             <Reveal>
+              <a href="mailto:kingwizzyndukwu@gmail.com">
               <div className="flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
                 <FontAwesomeIcon icon={faEnvelope} size="2x" className="text-blue-500" />
-                <p className="text-lg">kingwizzyndukwu@gmail.com</p>
+                <p className="text-lg ">kingwizzyndukwu@gmail.com</p>
               </div>
+              </a>
             </Reveal>
           </div>
         </div>
