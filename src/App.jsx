@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Intro from './components/Intro.jsx'
 import { Route, Routes } from 'react-router-dom'
 import MainLayout from './components/MainLayout.jsx'
 import Home from './pages/Home'
@@ -9,9 +10,21 @@ import Projects from './pages/Projects.jsx'
 import ProjectPage from './pages/ProjectPage.jsx'
 
 function App() {
+
+  const [showIntro, setShowIntro] = useState(false);
+
+  useEffect(() => {
+    const hasSeenIntro = sessionStorage.getItem('IntroPlayed');
+    if (!hasSeenIntro) {
+      setShowIntro(true);
+      sessionStorage.setItem('IntroPlayed', 'true');
+    }
+  }, []);
+
   return (
     <div>
-      <Routes>
+      {showIntro && <Intro onFinish={() => setShowIntro(false)} />}
+      {!showIntro && (<Routes>
         <Route element={<MainLayout/>}>
           <Route path='/' element={<Home />} />
           <Route path='skills' element={<Skills />} />
@@ -20,7 +33,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path={`/projects/:id`} element={<ProjectPage/>} />
         </Route>
-      </Routes>
+      </Routes>)}
     </div>
   )
 }

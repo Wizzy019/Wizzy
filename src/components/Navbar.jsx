@@ -15,8 +15,8 @@ import Logo from '../../public/favicon.png';
 
 const navItems = [
   { name: "Home", path: "/", icon: faHouse },
-  { name: "Skills", path: "/skills", icon: faTools },
   { name: "Projects", path: "/projects", icon: faBriefcase },
+  { name: "Skills", path: "/skills", icon: faTools },
   { name: "About", path: "/about", icon: faUser },
   { name: "Contact", path: "/contact", icon: faEnvelope },
 ];
