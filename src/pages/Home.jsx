@@ -39,7 +39,7 @@ const item = {
         <div className="mb-6">
           <motion.h2 className="text-4xl md:text-5xl font-bold text-white cursor-pointer leading-tight"
           variants={item}
-          >A Front-end Developer</motion.h2>
+          >A Web Developer</motion.h2>
         </div>
 
         <div className="mb-8">
