@@ -48,3 +48,5 @@ This portfolio is actively maintained and will evolve as I build more projects a
 Contact
 GitHub: (add link)
 Email: (add email)
+
+# Project Cleaned of Old Vercel References
