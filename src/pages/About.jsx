@@ -11,7 +11,7 @@ import MyImage from '../assets/wizzy_image.jpg';
 import Reveal from "../components/Reveal";
 const techStacks = [
   { name: "HTML5", icon: faHtml5, level: "Advanced" },
-  { name: "CSS3 / Tailwind", icon: faCss3, level: "Advanced" },
+  { name: "CSS3", icon: faCss3, level: "Advanced" },
   { name: "JavaScript", icon: faJsSquare, level: "Experienced" },
   { name: "Git / GitHub", icon: faGitAlt, level: "Experienced" },
   { name: "React", icon: faReact, level: "Experienced" },
@@ -40,12 +40,13 @@ function About() {
               I aim to be a developer who can be trusted to take ownership, ship responsibly, and deliver practical, well-thought-out solutions.
               </p>
               <a
-                href="/resume.pdf"
+                href="public/Ndukwu_Wisdom_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-max bg-blue-900 px-6 py-3 rounded hover:bg-blue-800 transition font-semibold"
+                download
               >
-                View Resume
+                Download Resume
               </a>
             </div>
           </div>

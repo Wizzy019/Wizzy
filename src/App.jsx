@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Intro from './components/Intro.jsx'
 import { Route, Routes } from 'react-router-dom'
 import MainLayout from './components/MainLayout.jsx'
@@ -13,13 +13,11 @@ function App() {
 
   const [showIntro, setShowIntro] = useState(false);
 
-  useEffect(() => {
     const hasSeenIntro = sessionStorage.getItem('IntroPlayed');
     if (!hasSeenIntro) {
       setShowIntro(true);
       sessionStorage.setItem('IntroPlayed', 'true');
     }
-  }, []);
 
   return (
     <div>
