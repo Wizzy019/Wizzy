@@ -11,7 +11,7 @@ import {
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import Logo from '../../public/favicon.png';
+import Logo from '/favicon.png';
 
 const navItems = [
   { name: "Home", path: "/", icon: faHouse },

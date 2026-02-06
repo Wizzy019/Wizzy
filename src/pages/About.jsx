@@ -40,11 +40,10 @@ function About() {
               I aim to be a developer who can be trusted to take ownership, ship responsibly, and deliver practical, well-thought-out solutions.
               </p>
               <a
-                href="public/Ndukwu_Wisdom_Resume.pdf"
+                href="public/Wisdom_Izuchukwu_Ndukwu_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-max bg-blue-900 px-6 py-3 rounded hover:bg-blue-800 transition font-semibold"
-                download
               >
                 Download Resume
               </a>
