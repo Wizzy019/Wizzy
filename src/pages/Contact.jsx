@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { supabase } from '../lib/supabase';
 import Reveal from "../components/Reveal";
 
@@ -90,19 +90,28 @@ function Contact() {
 
         <div>
           <h3 className="text-3xl font-bold mb-6 text-center">Other Ways to Reach Me</h3>
-          <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <div className="flex flex-col gap-6 justify-center">
             <Reveal>
-              <a href="https://x.com/arodike_wizzy">
-              <div className="flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
+              <a href="https://x.com/wizzy_nw">
+              <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
                 <FontAwesomeIcon icon={faXTwitter} size="2x" className="text-blue-500" />
-                <p className="text-lg">@arodike_wizzy</p>
+                <p className="text-lg">Wizzy Ndukwu</p>
+              </div>
+              </a>
+            </Reveal>
+
+             <Reveal>
+              <a href="https://www.linkedin.com/in/wisdom-ndukwu-36348a3ab">
+              <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
+                <FontAwesomeIcon icon={faLinkedin} size="2x" className="text-blue-500" />
+                <p className="text-lg ">Wisdom Ndukwu</p>
               </div>
               </a>
             </Reveal>
 
             <Reveal>
               <a href="mailto:kingwizzyndukwu@gmail.com">
-              <div className="flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
+              <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
                 <FontAwesomeIcon icon={faEnvelope} size="2x" className="text-blue-500" />
                 <p className="text-lg ">kingwizzyndukwu@gmail.com</p>
               </div>

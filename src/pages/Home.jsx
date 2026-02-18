@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import {
   faGithub,
+  faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -21,6 +22,14 @@ const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 },
 };
+
+const socialLinks = [
+  { icon: faGithub, url: "https://github.com/Wizzy019" },
+  { icon: faXTwitter, url: "https://x.com/wizzy-nw" },
+  { icon: faLinkedin, url: "https://www.linkedin.com/in/wisdom-ndukwu-36348a3ab" },
+  { icon: faEnvelope, url: "mailto:kingwizzyndukwu@gmail.com" },
+];
+
 
   function Home() {
   return (
@@ -66,7 +75,11 @@ const item = {
            </Link>
           </motion.div>   
         <motion.div className="w-max flex justify-center gap-6 text-gray-400 p-4 rounded-full mt-6" variants={item}>
-          <SocialIcons icons={[faGithub, faXTwitter, faEnvelope]} className="text-2xl md:text-2xl" />
+          <SocialIcons
+            icons={socialLinks}
+            className="text-2xl md:text-2xl"
+          />
+
         </motion.div>
       </div>
     </motion.section>
