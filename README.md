@@ -46,7 +46,7 @@ Status
 This portfolio is actively maintained and will evolve as I build more projects and deepen my technical skills.
 
 Contact
-GitHub: (https://github.com/Wizzy019/Wizzy)
+GitHub: (https://github.com/Wizzy019)
 Email: (kingwizzyndukwuu@gmail.com)
 
 # Project Cleaned of Old Vercel References
