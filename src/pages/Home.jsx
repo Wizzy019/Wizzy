@@ -92,7 +92,7 @@ function Home() {
           className="w-max flex justify-center gap-6 text-gray-400 p-4 rounded-full mt-6"
           variants={item}
         >
-          <SocialIcons icons={socialLinks} className="text-2xl md:text-2xl" />
+          <SocialIcons icons={socialLinks} className="text-3xl md:text-3xl" />
         </motion.div>
       </div>
     </motion.section>
