@@ -4,11 +4,15 @@ import Reveal from "./Reveal";
 
 function ProjectDetails({ project }) {
   const [comments, setComments] = useState(null);
-  const [form, setForm] = useState({ 
-    name: "", email: "", comment: "", project_id: project.id, date: new Date().toLocaleString()});
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    comment: "",
+    project_id: project.id,
+    created_at: new Date().toLocaleString(),
+  });
 
   const handleInputChange = (e) => {
-
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -19,31 +23,36 @@ function ProjectDetails({ project }) {
       return;
     }
 
-    const { error } = await supabase.from("comments").insert([form]);
+    const { data, error } = await supabase
+      .from("comments")
+      .insert([{ ...form, project_id: project.id }])
+      .select();
 
     if (error) {
       console.log("Error updating comments:", error.message);
     }
+    setComments((prev) => [...prev, data[0]]);
 
-      setForm({ name: "", email: "", comment: "",});
-    
+    setForm({ name: "", email: "", comment: "" });
   };
 
   useEffect(() => {
     const fetchComments = async () => {
-      const { data, error } = await supabase.from("comments").select("*").eq('project_id', project.id);
+      const { data, error } = await supabase
+        .from("comments")
+        .select("*")
+        .eq("project_id", project.id);
 
       if (error) {
         console.log("Error fetching comments:", error.message);
       } else {
         setComments(data);
-      } 
+      }
     };
 
     fetchComments();
   }, [project.id]);
-  
-  
+
   return (
     <section className="min-h-screen px-6 py-12 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto flex flex-col gap-8">
@@ -57,7 +66,7 @@ function ProjectDetails({ project }) {
         <Reveal>
           <div>
             <h2 className="text-4xl font-bold mb-4">{project.title}</h2>
-            <p className="text-gray-300 mb-4">{project.full_description}</p>
+            <p className="text-gray-300 mb-4">{project.extra_description}</p>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tech_stack?.map((tech, idx) => (
@@ -160,4 +169,4 @@ function ProjectDetails({ project }) {
   );
 }
 
-export default ProjectDetails
+export default ProjectDetails;

@@ -1,47 +1,45 @@
-import React from 'react'
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { supabase } from '../lib/supabase';
+import { faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import Reveal from "../components/Reveal";
-
+import emailjs from "emailjs-com";
 
 function Contact() {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-    const [formData, setFormData] = React.useState({
-        name: '',
-        email: '',
-        message: '' 
-    })
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-         setFormData((prev) => ({
-         ...prev,
-        [name]: value,
-        }));
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const {error} = await supabase.from('contact_messages').insert([formData]);
-
-        if (error) {
-            console.log(error.message);
-        } else {
-            console.log('Message sent successfully!');
-        }
-
-        setFormData({
-            name: '',
-            email: '',
-            message: ''
-        });
-    };
-
-
+    emailjs
+      .send(
+        "service_csqxjgi",
+        "template_a96js0e",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "WJE9i_Oxy-fHtA08_",
+      )
+      .then(() => {
+        console.log("Message sent");
+        setFormData({ name: "", email: "", message: "" });
+      });
+  };
 
   return (
     <section className="min-h-screen px-6 py-12 bg-gray-900 text-white">
@@ -49,9 +47,10 @@ function Contact() {
         <Reveal>
           <div>
             <h2 className="text-4xl font-bold mb-8 text-center">Contact Me</h2>
-            <form className="flex flex-col gap-4 bg-gray-800 p-6 rounded shadow-md"
+            <form
+              className="flex flex-col gap-4 bg-gray-800 p-6 rounded shadow-md"
               onSubmit={handleSubmit}
-              >
+            >
               <input
                 type="text"
                 name="name"
@@ -79,9 +78,7 @@ function Contact() {
                 required
                 onChange={handleInputChange}
               />
-              <button
-                className="w-max bg-blue-900 px-6 py-2 rounded hover:bg-blue-800 transition font-semibold"
-              >
+              <button className="w-max bg-blue-900 px-6 py-2 rounded hover:bg-blue-800 transition font-semibold">
                 Submit
               </button>
             </form>
@@ -89,32 +86,46 @@ function Contact() {
         </Reveal>
 
         <div>
-          <h3 className="text-3xl font-bold mb-6 text-center">Other Ways to Reach Me</h3>
+          <h3 className="text-3xl font-bold mb-6 text-center">
+            Other Ways to Reach Me
+          </h3>
           <div className="flex flex-col gap-6 justify-center">
             <Reveal>
               <a href="https://x.com/wizzy_nw">
-              <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
-                <FontAwesomeIcon icon={faXTwitter} size="2x" className="text-blue-500" />
-                <p className="text-lg">Wizzy Ndukwu</p>
-              </div>
+                <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
+                  <FontAwesomeIcon
+                    icon={faXTwitter}
+                    size="2x"
+                    className="text-blue-500"
+                  />
+                  <p className="text-lg">Wizzy Ndukwu</p>
+                </div>
               </a>
             </Reveal>
 
-             <Reveal>
+            <Reveal>
               <a href="https://www.linkedin.com/in/wisdom-ndukwu-36348a3ab">
-              <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
-                <FontAwesomeIcon icon={faLinkedin} size="2x" className="text-blue-500" />
-                <p className="text-lg ">Wisdom Ndukwu</p>
-              </div>
+                <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    size="2x"
+                    className="text-blue-500"
+                  />
+                  <p className="text-lg ">Wisdom Ndukwu</p>
+                </div>
               </a>
             </Reveal>
 
             <Reveal>
               <a href="mailto:kingwizzyndukwu@gmail.com">
-              <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
-                <FontAwesomeIcon icon={faEnvelope} size="2x" className="text-blue-500" />
-                <p className="text-lg ">kingwizzyndukwu@gmail.com</p>
-              </div>
+                <div className="w-max flex items-center gap-4 bg-gray-800 p-4 rounded shadow-md hover:shadow-xl transition">
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    size="2x"
+                    className="text-blue-500"
+                  />
+                  <p className="text-lg ">kingwizzyndukwu@gmail.com</p>
+                </div>
               </a>
             </Reveal>
           </div>
@@ -124,4 +135,4 @@ function Contact() {
   );
 }
 
-export default Contact
+export default Contact;
