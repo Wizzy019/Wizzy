@@ -10,6 +10,7 @@ function Projects() {
   useEffect(() => {
     const fetchProjects = async () => {
       const { data, error } = await supabase.from("projects").select("*");
+      // fix made here
 
       if (error) {
         setError(error.message);
