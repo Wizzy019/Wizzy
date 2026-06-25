@@ -1,6 +1,6 @@
 // Intro.jsx
 import { motion } from "framer-motion";
-import Logo from '../../public/favicon.png';
+import Logo from "../assets/logo.svg";
 
 const Intro = ({ onFinish }) => {
   return (

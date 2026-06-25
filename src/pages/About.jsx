@@ -1,21 +1,85 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faReact,
-  faHtml5,
-  faCss3Alt,
-  faJsSquare,
-  faGitAlt,
-  faCss3,
-} from "@fortawesome/free-brands-svg-icons";
-import MyImage from '../assets/wizzy_image.jpg';
+  SiCss,
+  SiFastapi,
+  SiGit,
+  SiHtml5,
+  SiJavascript,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import MyImage from "../assets/wizzy_image.jpg";
 import Reveal from "../components/Reveal";
 const techStacks = [
-  { name: "HTML5", icon: faHtml5, level: "Advanced" },
-  { name: "CSS3", icon: faCss3, level: "Advanced" },
-  { name: "JavaScript", icon: faJsSquare, level: "Experienced" },
-  { name: "Git / GitHub", icon: faGitAlt, level: "Experienced" },
-  { name: "React", icon: faReact, level: "Experienced" },
-  { name: "Tailwind CSS", icon: faCss3Alt, level: "Experienced" },
+  {
+    name: "HTML5",
+    icon: SiHtml5,
+    level: "Advanced",
+    color: "#E34F26",
+  },
+  {
+    name: "CSS3",
+    icon: SiCss,
+    level: "Advanced",
+    color: "#1572B6",
+  },
+  {
+    name: "JavaScript",
+    icon: SiJavascript,
+    level: "Experienced",
+    color: "#F7DF1E",
+  },
+  {
+    name: "Git / GitHub",
+    icon: SiGit,
+    level: "Experienced",
+    color: "#F05032",
+  },
+  {
+    name: "React",
+    icon: SiReact,
+    level: "Experienced",
+    color: "#61DAFB",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: SiTailwindcss,
+    level: "Experienced",
+    color: "#06B6D4",
+  },
+  {
+    name: "Python",
+    icon: SiPython,
+    level: "Experienced",
+    color: "#3776AB",
+  },
+  {
+    name: "TypeScript",
+    icon: SiTypescript,
+    level: "Experienced",
+    color: "#3178C6",
+  },
+  {
+    name: "FastAPI",
+    icon: SiFastapi,
+    level: "Experienced",
+    color: "#009688",
+  },
+  {
+    name: "Supabase",
+    icon: SiSupabase,
+    level: "Experienced",
+    color: "#3ECF8E",
+  },
+  {
+    name: "PostgreSQL",
+    icon: SiPostgresql,
+    level: "Experienced",
+    color: "#4169E1",
+  },
 ];
 
 function About() {
@@ -35,9 +99,11 @@ function About() {
             <div className="md:w-2/3 flex flex-col items-center gap-6">
               <h2 className="text-4xl font-bold text-center">Wisdom Ndukwu</h2>
               <p className="text-gray-300 text-lg text-center">
-               I'm a Web developer focused on building reliable, scalable web applications using React, Tailwind CSS, and Supabase. I learn by building and ship projects with real structure - databases, authentication, and clean UI logic.
-              I value discipline, long-term growth, and deliberate execution. I don't chase trends; I focus on mastering skills that compound over time and solving problems that matter.
-              I aim to be a developer who can be trusted to take ownership, ship responsibly, and deliver practical, well-thought-out solutions.
+                I'm a full-stack developer passionate about software
+                engineering, building scalable applications, and solving
+                real-world problems through technology. I enjoy creating robust
+                systems, crafting intuitive user experiences, and exploring how
+                AI can be integrated into modern software.
               </p>
               <a
                 href="/resume.pdf"
@@ -53,21 +119,25 @@ function About() {
         </Reveal>
 
         <div>
-          <h3 className="text-3xl font-bold mb-8 text-center">My Tech Stacks</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center">
+            My Tech Stacks
+          </h3>
           <div className="grid grid-cols-3 gap-6">
-            {techStacks.map((tech, idx) => (
-              <Reveal key={idx}>
-                <div
-                  className="w-max md:w-full flex items-center gap-4 bg-gray-500/50 rounded-lg p-6 shadow-md hover:shadow-xl transition"
-                >
-                  <FontAwesomeIcon icon={tech.icon} size="3x" className="text-blue-500" />
-                 <div className="hidden md:block text-center">
-                   <h4 className="text-xl font-semibold">{tech.name}</h4>
-                  <p className="text-gray-400 ">{tech.level}</p>
-                 </div>
-                </div>
-              </Reveal>
-            ))}
+            {techStacks.map((tech, idx) => {
+              const Icon = tech.icon;
+
+              return (
+                <Reveal key={idx}>
+                  <div className="w-max md:w-full flex items-center gap-4 bg-gray-500/50 rounded-lg p-6 shadow-md hover:shadow-xl transition">
+                    <Icon size={40} style={{ color: tech.color }} />
+                    <div className="hidden md:block text-center">
+                      <h4 className="text-xl font-semibold">{tech.name}</h4>
+                      <p className="text-gray-400 ">{tech.level}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -75,4 +145,4 @@ function About() {
   );
 }
 
-export default About
+export default About;

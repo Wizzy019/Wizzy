@@ -1,0 +1,73 @@
+<!--
+NovaWiz Monogram Logo
+Style: Modern / Minimal / Professional
+Theme: Software Engineering + Innovation
+Author: ChatGPT
+-->
+
+<svg width="512" height="512" viewBox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- ===== DEFINITIONS ===== -->
+  <defs>
+    <!-- Main gradient -->
+    <linearGradient id="nwGradient"
+                    x1="0%" y1="0%"
+                    x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7DD3FC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== MONOGRAM ===== -->
+
+  <!-- N -->
+  <path
+    d="M140 120
+       L140 320
+       L190 320
+       L190 205
+       L300 340
+       L350 340
+       L350 120
+       L300 120
+       L300 245
+       L190 120 Z"
+    fill="#2563EB"/>
+
+  <!-- W integrated underneath -->
+  <path
+    d="M150 300
+       L210 400
+       L255 335
+       L300 400
+       L360 300
+       L315 300
+       L285 350
+       L255 305
+       L225 350
+       L195 300 Z"
+    fill="#7DD3FC"/>
+
+  <!-- Orbit / energy streak -->
+  <path
+    d="M90 300
+       C150 360, 320 360, 420 250"
+    fill="none"
+    stroke="url(#nwGradient)"
+    stroke-width="16"
+    stroke-linecap="round"/>
+
+  <!-- Nova spark -->
+  <path
+    d="M395 110
+       L405 140
+       L435 150
+       L405 160
+       L395 190
+       L385 160
+       L355 150
+       L385 140 Z"
+    fill="#2563EB"/>
+
+</svg>

@@ -46,7 +46,7 @@ function Home() {
             className="text-2xl font-bold text-white cursor-pointer"
             variants={item}
           >
-            Hi, I'm <span className="text-blue-900">Wizzy</span>
+            Hi, I'm <span className="text-blue-900">NovaWiz</span>
           </motion.h1>
         </div>
 
@@ -64,9 +64,9 @@ function Home() {
             className="text-gray-400 text-lg cursor-pointer"
             variants={item}
           >
-            Building reliable digital products with focus, discipline, and
-            real-world impact. Web developer crafting clean interfaces, scalable
-            logic, and practical solutions—one shipped project at a time.
+            Full-Stack Developer building modern web applications. Focused on
+            solving real problems, writing clean code, and delivering
+            exceptional user experiences.
           </motion.p>
         </div>
 

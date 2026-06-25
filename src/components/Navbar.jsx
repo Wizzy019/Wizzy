@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +10,7 @@ import {
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import Logo from '/favicon.png';
+import Logo from "../assets/logo.svg";
 
 const navItems = [
   { name: "Home", path: "/", icon: faHouse },
@@ -27,7 +26,7 @@ export default function Navbar() {
   return (
     <nav className="bg-navy-900 text-white px-6 py-4 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <img src={Logo} className="size-20"/>
+        <img src={Logo} className="size-20" />
         <ul className="hidden md:flex gap-8">
           {navItems.map((item) => (
             <li key={item.name}>
@@ -44,10 +43,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-xl"
-        >
+        <button onClick={() => setOpen(!open)} className="md:hidden text-xl">
           <FontAwesomeIcon icon={open ? faXmark : faBars} />
         </button>
       </div>
@@ -59,9 +55,7 @@ export default function Navbar() {
                 to={item.path}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `text-xl ${
-                    isActive ? "text-blue-900" : "text-white"
-                  }`
+                  `text-xl ${isActive ? "text-blue-900" : "text-white"}`
                 }
               >
                 <FontAwesomeIcon icon={item.icon} />
