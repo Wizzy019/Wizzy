@@ -5,7 +5,7 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import Logo from "../../public/favicon.png";
+import Logo from "/favicon.png";
 
 function Footer() {
   const socialLinks = [
